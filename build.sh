@@ -18,7 +18,7 @@ function run_codegen () {
     -v "${PROJECT_DIR}:/local" \
     openapitools/openapi-generator-cli:latest generate -g typescript-node \
     -i /local/openapi.json -o /local/typescript-node/src \
-    --skip-validate-spec
+    --additional-properties="supportsES6=true" --skip-validate-spec
 
   rm .docker_user_passwd
 }

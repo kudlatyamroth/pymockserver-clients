@@ -80,7 +80,7 @@ export class MetaApi {
      * Status response for readiness and liveness probe
      * @summary Health Check
      */
-    public async healthCheck (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async healthCheck (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/_meta/health';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -122,7 +122,7 @@ export class MetaApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

@@ -84,7 +84,7 @@ export class MockServerApi {
      * @summary Add Mock
      * @param createPayload 
      */
-    public async addMock (createPayload: CreatePayload, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async addMock (createPayload: CreatePayload, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/mockserver';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -132,7 +132,7 @@ export class MockServerApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -152,7 +152,7 @@ export class MockServerApi {
      * Delete all mocked routes
      * @summary Clear All Mocks
      */
-    public async clearAllMocks (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async clearAllMocks (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/mockserver/reset';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -194,7 +194,7 @@ export class MockServerApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -215,7 +215,7 @@ export class MockServerApi {
      * @summary Delete Mock
      * @param httpRequest 
      */
-    public async deleteMock (httpRequest: HttpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async deleteMock (httpRequest: HttpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/mockserver';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -263,7 +263,7 @@ export class MockServerApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -283,7 +283,7 @@ export class MockServerApi {
      * Get all mocked routes
      * @summary Get All Mocks
      */
-    public async getAllMocks (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async getAllMocks (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/mockserver';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -325,7 +325,7 @@ export class MockServerApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -345,7 +345,7 @@ export class MockServerApi {
      * Status response for readiness and liveness probe
      * @summary Health Check
      */
-    public async healthCheck (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: object;  }> {
+    public async healthCheck (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: object;  }> {
         const localVarPath = this.basePath + '/_meta/health';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -387,7 +387,7 @@ export class MockServerApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: object;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: object;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
