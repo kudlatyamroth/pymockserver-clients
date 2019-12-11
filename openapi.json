@@ -3,14 +3,13 @@
   "info": {
     "title": "MockServer API",
     "description": "Simple and fast mock server implemented in python",
-    "version": "1.0.0"
+    "version": "1.2.0"
   },
   "paths": {
     "/_meta/health": {
       "get": {
         "tags": [
-          "meta",
-          "MockServer"
+          "Meta"
         ],
         "summary": "Health Check",
         "description": "Status response for readiness and liveness probe",
@@ -241,6 +240,14 @@
           },
           "body": {
             "title": "Body",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ],
             "description": "Body that will be returned",
             "default": "",
             "example": "{\"users\":[\"John\",\"Dave\"]}"
