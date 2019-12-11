@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "esModuleInterop": true,
     "lib": [ "es2017" ],
     "module": "commonjs",
@@ -9,6 +10,6 @@
     "target": "ES2017"
   },
   "include": [
-    "**/*.ts"
+    "src/**/*.ts"
   ]
 }
