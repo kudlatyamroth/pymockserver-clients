@@ -1,6 +1,6 @@
 {
   "name": "pymockserver-client",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "PyMockServer client",
   "repository": "kudlatyamroth/pymockserver-client",
   "main": "dist/api.js",
